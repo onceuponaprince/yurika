@@ -3,8 +3,16 @@ import { Suspense, useRef, useState } from 'react'
 import { Canvas, useFrame, useThree } from '@react-three/fiber'
 import { Preload, ScrollControls, Scroll, useScroll, Html } from '@react-three/drei'
 
+export interface CardProps {
+  title: string;
+  description: string;
+  scale: number | [number, number, number];
+  url: string;
+  position?: [number, number, number];
+  [key: string]: any;
+}
 
-function Card({ title, description, scale, url, ...props }) {
+function Card({ title, description, scale, url, ...props }: CardProps) {
   const [hovered, hover] = useState(false)
   
   return (

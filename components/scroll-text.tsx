@@ -79,7 +79,7 @@ export function ScrollText({ leftText, rightPhrases, className = "" }: ScrollTex
       ref={containerRef}
       className={`min-h-screen flex items-center gap-8 px-16 py-28 max-lg:gap-6 max-lg:px-8 max-lg:py-16 ${className}`}
     >
-      <div className="flex-shrink-0">
+      <div className="shrink-0">
         <h1 className="text-7xl max-lg:text-5xl font-medium text-black leading-none">{leftText.title}</h1>
         <h3 className="text-2xl max-lg:text-lg font-medium text-black mt-4">{leftText.subheading}</h3>
         <p className="text-md max-lg:text-sm text-black mt-4 max-w-md">{leftText.description}</p>
