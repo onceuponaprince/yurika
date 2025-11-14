@@ -1,7 +1,6 @@
 "use client"
 import YurikaHero from "@/components/organisms/hero-section";
 import Program from "@/components/organisms/program-section";
-import Summary from "@/components/organisms/summary-section";
 import ChoosePath from "@/components/organisms/path-section";
 import Link from "next/link";
 import { SelectThemeDropdown } from "@/components/select-theme-dropdown";
@@ -23,7 +22,7 @@ export default function Home() {
       <header className="flex
         sticky
         top-0
-        z-20
+        z-30
         justify-evenly
         items-center
         flex-col
@@ -38,7 +37,7 @@ export default function Home() {
             setActiveTheme={setActiveTheme}
           />
         </section>
-        <nav className="flex justify-evenly py-4 gap-8 bg-transparent">
+        <nav className="flex justify-evenly py-4 gap-8 bg-secondary-background">
           <Link href={'/'}><GameButton variant={"default"} className="cursor-pointer">Home</GameButton></Link>
           <Link href={'/about-us'}><GameButton variant={"default"} className="cursor-pointer">About</GameButton></Link>
           <Link href={'/dev-path'}><GameButton variant={"default"} className="cursor-pointer">For Devs</GameButton></Link>
@@ -49,7 +48,6 @@ export default function Home() {
       </header>
       <main>
         <Program />
-        <Summary />
         <ChoosePath />
         <FAQSection />
       </main>

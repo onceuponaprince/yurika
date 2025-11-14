@@ -15,7 +15,7 @@ export default function ChapterIntro({
   className,
   title,
   subtitle,
-  backgroundSrc = "/placeholder.svg",
+  backgroundSrc = "/images/fiery-skeletons.png",
   align = "center",
   height = "md",
   darken = 0.5,
@@ -37,8 +37,8 @@ export default function ChapterIntro({
 
   return (
     <Card className={cn(className)} {...props}>
-      <CardContent className={cn("relative p-0")}>
-        <div className={cn("relative w-full", heightClass)}>
+      <CardContent className={cn("relative p-0 -m-4")}>
+        <div className={cn("relative w-screen h-screen")}>
           {/* Background image */}
           <img
             src={backgroundSrc}

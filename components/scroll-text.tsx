@@ -77,23 +77,23 @@ export function ScrollText({ leftText, rightPhrases, className = "" }: ScrollTex
   return (
     <div
       ref={containerRef}
-      className={`min-h-screen flex items-center gap-8 px-16 py-28 max-lg:gap-6 max-lg:px-8 max-lg:py-16 ${className}`}
+      className={`h-screen flex flex-col items-center overflow-hidden m-0 p-0 ${className}`}
     >
-      <div className="shrink-0">
+      <section className="h-[20vh] m-0 p-0">
         <h1 className="text-7xl max-lg:text-5xl font-medium text-black leading-none">{leftText.title}</h1>
         <h3 className="text-2xl max-lg:text-lg font-medium text-black mt-4">{leftText.subheading}</h3>
         <p className="text-md max-lg:text-sm text-black mt-4 max-w-md">{leftText.description}</p>
-      </div>
+      </section>
 
-      <div className="flex-1 relative h-screen max-lg:h-[80vh] overflow-hidden">
-        <div className="flex flex-col" style={{ gap: '100px' }}>
+      <section className="relative flex flex-col overflow-hidden h-screen w-screen z-1">
+        <div className="flex flex-col">
           {rightPhrases.map((phrase, index) => (
             <div
               key={index}
-              className="h-[1000px] flex items-center"
+              className="h-screen flex items-center justify-center m-0 p-0 w-screen"
               style={{
-                transform: `translateY(calc(${-internalScroll * 10}px))`,
-                transition: 'transform 0.1s ease-out',
+                transform: `translateY(calc(${-internalScroll} * 11px))`,
+                transition: 'transform 0.5s ease-out',
               }}
             >
               {phrase}
@@ -101,9 +101,9 @@ export function ScrollText({ leftText, rightPhrases, className = "" }: ScrollTex
           ))}
         </div>
 
-        <div className="absolute top-0 left-0 right-0 h-40 max-lg:h-32 bg-linear-to-b from-white via-white/80 to-transparent pointer-events-none z-10" />
-        <div className="absolute bottom-0 left-0 right-0 h-40 max-lg:h-32 bg-linear-to-t from-white via-white/80 to-transparent pointer-events-none z-10" />
-      </div>
+        <div className="absolute top-0 left-0 right-0 h-20 max-lg:h-32 bg-linear-to-b from-white via-white/80 to-transparent pointer-events-none z-1" />
+        <div className="absolute bottom-0 left-0 right-0 h-20 max-lg:h-32 bg-linear-to-t from-white via-white/80 to-transparent pointer-events-none z-1" />
+      </section>
     </div>
   )
 }
