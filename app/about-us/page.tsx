@@ -7,7 +7,7 @@ export const metadata = {
     description: "Learn about Yurika: our mission, values, and the people behind what we do.",
 };
 
-export default function AboutPage(): JSX.Element {
+export default function AboutPage() {
     return (
         <main style={{ fontFamily: "system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial", color: "#111", lineHeight: 1.6, padding: "48px", maxWidth: 900, margin: "0 auto" }}>
             <header style={{ marginBottom: 32 }}>
