@@ -3,17 +3,17 @@ import { ScrollText } from "@/components/scroll-text"
 export default function Program() {
   const rightPhrases = [
     <Card title="Howdy Partner" description="Goodbye world"/>,
-    "Geist Design System",
-    "the Next.js framework",
-    "the Vercel brand",
-    "Next.js Conf",
-    "the v0 platform",
-    "Vercel Ship",
+    <Card title="Howdy Partner" description="Goodbye world"/>,
+    <Card title="Howdy Partner" description="Goodbye world"/>,
+    <Card title="Howdy Partner" description="Goodbye world"/>,
+    <Card title="Howdy Partner" description="Goodbye world"/>,
+    <Card title="Howdy Partner" description="Goodbye world"/>,
+    <Card title="Howdy Partner" description="Goodbye world"/>,
   ]
 
   return (
-    <div className="w-full py-20 ">
-        <ScrollText leftText="We design" rightPhrases={rightPhrases} />
+    <div className="w-full gap-20">
+        <ScrollText leftText={{title: "Our Program", subheading: "16-Week Acceleration Journey", description: "From idea to production-ready dApp with comprehensive support"}} rightPhrases={rightPhrases} />
     </div>
       
   )
